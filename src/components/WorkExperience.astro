@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+
+const title = " Experiencia laboral"
+
+const workExperience = await getCollection("workExperience")
+console.log(workExperience)
+---
+<section>
+	<h2>{title}</h2>
+	<ol>
+		{
+			workExperience.map((exp) => {
+				const { data, body } = exp;
+				const {
+					position,
+					company,
+					starDate,
+					endDate,
+					link
+				} = data;
+				return (
+					<li class="relatib">
+						<div> punto</div>
+						<div>
+							<div>
+								<h3>{position}</h3>
+								<h4>{company}</h4>
+								<div>
+									<div>Star</div>
+									<time datetime={starDate}>{starDate}</time>
+									<div>End</div>
+									<time datetime={endDate}>{endDate}</time>
+								</div>
+							</div>
+							<div>
+								<p>{body}</p>
+							</div>
+						</div>
+
+					</li>
+				)
+			})
+		}
+
+	</ol>
+
+</section>

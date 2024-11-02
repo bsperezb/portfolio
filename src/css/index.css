@@ -1,0 +1,22 @@
+
+:root {
+	--primary-color: #e4d9ff;
+	--secondary-color: #1e2749;
+	--tertiary-color: #273469;
+	--white-color: #fafaff;
+	--dark-color: #30343f;
+
+	color-scheme: light dark;
+}
+body {
+	font-family: 'Onest Variable', sans-serif;
+	font-display: swap;
+
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: column;
+	gap: 4rem;
+	background-color: var(--secodary-color);
+	min-height: 100vh;
+}

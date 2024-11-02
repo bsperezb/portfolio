@@ -1,5 +1,6 @@
 ---
 import '@fontsource-variable/onest';
+import '@/css/index.css';
 interface Props {
 	title: string;
 }
@@ -21,21 +22,3 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--primary-color: #e4d9ff;
-		--secondary-color: #1e2749;
-		--tertiary-color: #273469;
-		--white-color: #fafaff;
-		--dark-color: #30343f;
-
-		color-scheme: light dark;
-	}
-	body {
-		display: flex;
-		justify-content: center;
-		background-color: var(--secodary-color);
-		min-height: 100vh;
-		font-family: 'Onest Variable', sans-serif;
-	}
-</style>
