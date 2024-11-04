@@ -6,9 +6,12 @@ const title = " Experiencia laboral"
 const workExperience = await getCollection("workExperience")
 console.log(workExperience)
 ---
-<section>
-	<h2>{title}</h2>
-	<ol>
+<section class="wrapp ">
+	<h2 class="text-4xl text-white  flex justify-center items-center flex-col
+		font-extrabold container mb-6">
+		{title}
+	</h2>
+	<ol class="py-5 relative ml-12 container max-w-full">
 		{
 			workExperience.map((exp) => {
 				const { data, body } = exp;
@@ -20,21 +23,22 @@ console.log(workExperience)
 					link
 				} = data;
 				return (
-					<li class="relatib">
-						<div> punto</div>
-						<div>
+					<li class="relative">
+						<div class="absolute text-5xl bg-tertiary w-5 h-5 border-2 
+							border-primary rounded-full top-12 -left-12"></div>
+						<div class="flex flex-wrap justify-between contaniner max-w-full">
 							<div>
-								<h3>{position}</h3>
-								<h4>{company}</h4>
-								<div>
+								<h3 class="text-2xl font-extrabold  text-primary uppercase">{position}</h3>
+								<h4 class="text-2xl text-white font-bold">{company}</h4>
+								<div class="text-base">
 									<div>Star</div>
-									<time datetime={starDate}>{starDate}</time>
+									<time class="" datetime={starDate}>{starDate}</time>
 									<div>End</div>
 									<time datetime={endDate}>{endDate}</time>
 								</div>
 							</div>
-							<div>
-								<p>{body}</p>
+							<div class="container max-w-md">
+								<p class="text-base">{body}</p>
 							</div>
 						</div>
 

@@ -20,3 +20,7 @@ body {
 	background-color: var(--secodary-color);
 	min-height: 100vh;
 }
+
+.wrapp {
+	@apply container lg:max-w-4xl md:max-w-2xl mt-20;
+}
